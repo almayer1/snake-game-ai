@@ -1,10 +1,9 @@
 import pygame
+from game import settings
 
 def main():
-    x = 400
-    y = 300
     pygame.init()
-    screen = pygame.display.set_mode((x, y)).convert()
+    screen = pygame.display.set_mode((settings.WINDOW_WIDTH, settings.WINDOW_HEIGHT)).convert()
     pygame.display.set_caption("Hello Pygame")
 
     # Game loop
@@ -13,7 +12,8 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-        
+    
+
 
     # Quit Pygame
     pygame.quit()
